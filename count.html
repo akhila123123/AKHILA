@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+           .main{
+            display: flex;
+            
+            border: 1px solid black;
+            height: 300px;
+            width: 250px;
+            flex-direction: column;
+            text-align: center;
+            font-size: 10px;
+            justify-content:center;
+            background-color: rgb(241,245,248);
+            margin: 100px;
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="main">
+        <!-- <div class="counter" style="color: rgb(2,127,0)">0</div> -->
+        <h1 style="color: rgb(26,51,73);">
+            Counter
+        </h1>
+        <!-- <input type="text" class="num"> -->
+       
+        <h1 style="color: rgb(2,127,0);" class="count">3</h1>
+        <div>
+            <!-- <button class="update">UPDATE</button> -->
+            <button class="dec">DECREASE</button>
+            <button class="rst">RESET</button>
+            <button class="btn" style="border:1px solid rgb(147,186,230)">INCREASE</button>
+        </div>
+    </div>
+    <script>
+        let count=3
+        // const counterElement = document.getElementById(".counter");
+        // const counterInput = document.getElementById(".num");
+        const counterDisp=document.querySelector(".count")
+        const counterBtn=document.querySelector(".btn")
+        const counterrst=document.querySelector(".rst")
+        const counterdec=document.querySelector(".dec")
+
+          
+   
+        counterBtn.addEventListener('click', function ()
+        {
+            count+=1
+            counterDisp.innerHTML=count
+         
+        })
+       counterdec.addEventListener('click',function()
+        {
+            count-=1;
+            counterDisp.innerHTML=count
+        })
+        counterrst.addEventListener('click',function()
+        {
+            count=3;
+            counterDisp.innerHTML=count
+        })
+        
+
+    </script>
+</body>
+</html>
